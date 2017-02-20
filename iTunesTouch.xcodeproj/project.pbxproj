@@ -12,6 +12,8 @@
 		0F1EF0B91E5AE35100EED4CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1EF0B81E5AE35100EED4CA /* ViewController.m */; };
 		0F1EF0BB1E5AE35100EED4CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F1EF0BA1E5AE35100EED4CA /* Assets.xcassets */; };
 		0F1EF0BE1E5AE35100EED4CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1EF0BC1E5AE35100EED4CA /* Main.storyboard */; };
+		0F1EF0CC1E5AE63400EED4CA /* TouchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1EF0CB1E5AE63400EED4CA /* TouchBarViewController.m */; };
+		0F1EF0D41E5AEEC700EED4CA /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1EF0D31E5AEEC700EED4CA /* ScriptingBridge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,12 @@
 		0F1EF0BA1E5AE35100EED4CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F1EF0BD1E5AE35100EED4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F1EF0BF1E5AE35100EED4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F1EF0CA1E5AE63400EED4CA /* TouchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchBarViewController.h; sourceTree = "<group>"; };
+		0F1EF0CB1E5AE63400EED4CA /* TouchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchBarViewController.m; sourceTree = "<group>"; };
+		0F1EF0D11E5AE72F00EED4CA /* iTunesLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iTunesLibrary.framework; path = ../../../../Library/Frameworks/iTunesLibrary.framework; sourceTree = "<group>"; };
+		0F1EF0D31E5AEEC700EED4CA /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = ../../../../System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<group>"; };
+		0F1EF0D51E5AEF3300EED4CA /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		0F597B781E5B3ABB0031E7E6 /* Spotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F1EF0D41E5AEEC700EED4CA /* ScriptingBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 			children = (
 				0F1EF0B01E5AE35100EED4CA /* iTunesTouch */,
 				0F1EF0AF1E5AE35100EED4CA /* Products */,
+				0F1EF0D01E5AE72F00EED4CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,14 +66,14 @@
 		0F1EF0B01E5AE35100EED4CA /* iTunesTouch */ = {
 			isa = PBXGroup;
 			children = (
+				0F1EF0B41E5AE35100EED4CA /* Supporting Files */,
 				0F1EF0B11E5AE35100EED4CA /* AppDelegate.h */,
 				0F1EF0B21E5AE35100EED4CA /* AppDelegate.m */,
 				0F1EF0B71E5AE35100EED4CA /* ViewController.h */,
 				0F1EF0B81E5AE35100EED4CA /* ViewController.m */,
-				0F1EF0BA1E5AE35100EED4CA /* Assets.xcassets */,
 				0F1EF0BC1E5AE35100EED4CA /* Main.storyboard */,
-				0F1EF0BF1E5AE35100EED4CA /* Info.plist */,
-				0F1EF0B41E5AE35100EED4CA /* Supporting Files */,
+				0F1EF0CA1E5AE63400EED4CA /* TouchBarViewController.h */,
+				0F1EF0CB1E5AE63400EED4CA /* TouchBarViewController.m */,
 			);
 			path = iTunesTouch;
 			sourceTree = "<group>";
@@ -71,9 +81,22 @@
 		0F1EF0B41E5AE35100EED4CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F1EF0D51E5AEF3300EED4CA /* iTunes.h */,
+				0F597B781E5B3ABB0031E7E6 /* Spotify.h */,
+				0F1EF0BA1E5AE35100EED4CA /* Assets.xcassets */,
 				0F1EF0B51E5AE35100EED4CA /* main.m */,
+				0F1EF0BF1E5AE35100EED4CA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F1EF0D01E5AE72F00EED4CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F1EF0D31E5AEEC700EED4CA /* ScriptingBridge.framework */,
+				0F1EF0D11E5AE72F00EED4CA /* iTunesLibrary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +131,7 @@
 					0F1EF0AD1E5AE35100EED4CA = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = NPU2FZFY6H;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -149,6 +173,7 @@
 			files = (
 				0F1EF0B91E5AE35100EED4CA /* ViewController.m in Sources */,
 				0F1EF0B61E5AE35100EED4CA /* main.m in Sources */,
+				0F1EF0CC1E5AE63400EED4CA /* TouchBarViewController.m in Sources */,
 				0F1EF0B31E5AE35100EED4CA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,12 +283,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = NPU2FZFY6H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = iTunesTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rauch.jonathan.iTunesTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iTunesTouch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -271,12 +306,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = NPU2FZFY6H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = iTunesTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rauch.jonathan.iTunesTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iTunesTouch-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -299,6 +343,7 @@
 				0F1EF0C41E5AE35100EED4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
